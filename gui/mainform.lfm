@@ -1,6 +1,6 @@
 object Mainform: TMainform
   Left = 446
-  Height = 600
+  Height = 620
   Top = 136
   Width = 800
   AllowDropFiles = True
@@ -16,6 +16,7 @@ object Mainform: TMainform
   Font.Name = 'Microsoft YaHei UI'
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
+  Menu = MainMenu
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -516,39 +517,29 @@ object Mainform: TMainform
       1294856F481A0000000049454E44AE426082
     }
   end
-  object GroupBox1: TGroupBox
+  object LeftBox: TGroupBox
     Left = 8
     Height = 592
     Top = 0
     Width = 298
-    Caption = 'GroupBox1'
+    Caption = 'LeftBox'
     TabOrder = 0
   end
-  object GroupBox2: TGroupBox
+  object RightBox: TGroupBox
     Left = 313
     Height = 238
     Top = 320
     Width = 474
-    Caption = 'GroupBox2'
+    Caption = 'RightBox'
     ParentBidiMode = False
     TabOrder = 1
   end
   object PBpres: TProgressBar
-    Left = 312
+    Left = 313
     Height = 23
-    Top = 567
+    Top = 568
     Width = 433
     TabOrder = 2
-  end
-  object Pres: TEdit
-    Left = 752
-    Height = 25
-    Top = 567
-    Width = 35
-    Alignment = taCenter
-    Color = clWindowFrame
-    TabOrder = 3
-    Text = 'Pres'
   end
   object ListView1: TListView
     Left = 312
@@ -557,12 +548,67 @@ object Mainform: TMainform
     Width = 475
     Columns = <>
     Items.LazData = {
-      6B00000002000000FFFFFFFFFFFFFFFFFFFFFFFF0300000007000000E9A1B9E7
-      9BAE3007000000E9A1B9E79BAE3107000000E9A1B9E79BAE3207000000E9A1B9
-      E79BAE33FFFFFFFFFFFFFFFFFFFFFFFF0000000007000000E9A1B9E79BAE34FF
-      FFFFFFFFFFFFFFFFFFFFFF
+      1F00000001000000FFFFFFFFFFFFFFFFFFFFFFFF0000000003000000E7A9BA
     }
+    TabOrder = 3
+    ViewStyle = vsIcon
+  end
+  object Pres: TStaticText
+    Cursor = crHandPoint
+    Left = 752
+    Height = 18
+    Top = 573
+    Width = 25
+    Alignment = taCenter
+    AutoSize = True
+    Caption = 'Pres'
     TabOrder = 4
-    ViewStyle = vsReport
+  end
+  object MainMenu: TMainMenu
+    Left = 496
+    Top = 360
+    object MenuItem1: TMenuItem
+      Caption = '文件(&F)'
+      OnClick = MenuItem1Click
+      object Maddpic: TMenuItem
+        Caption = '添加图片(&P)...'
+        OnClick = MaddpicClick
+        object MPF: TMenuItem
+          Caption = '文件(&F)'
+          OnClick = MPFClick
+        end
+        object MPD: TMenuItem
+          Caption = '文件夹(&D)'
+          OnClick = MPDClick
+        end
+        object MPU: TMenuItem
+          Caption = 'URL(&U)'
+          OnClick = MPUClick
+        end
+      end
+      object Maddvd: TMenuItem
+        Caption = '添加视频(&V)...'
+        OnClick = MaddvdClick
+        object MVF: TMenuItem
+          Caption = '文件(&F)'
+          OnClick = MVFClick
+        end
+        object MVD: TMenuItem
+          Caption = '文件夹(&D)'
+          OnClick = MVDClick
+        end
+        object MVU: TMenuItem
+          Caption = 'URL(&U)'
+          OnClick = MVUClick
+        end
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = '关于(&A)'
+      object MenuItem5: TMenuItem
+        Caption = '关于项目'
+        OnClick = MenuItem5Click
+      end
+    end
   end
 end

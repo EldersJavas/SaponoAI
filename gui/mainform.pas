@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  ExtCtrls;
+  ExtCtrls, Buttons, Menus;
 
 type
 
@@ -15,14 +15,36 @@ type
   TMainform = class(TForm)
     Background: TImage;
     ListView1: TListView;
-    Pres: TEdit;
-    GroupBox1: TGroupBox;
-    GroupBox2: TGroupBox;
+    LeftBox: TGroupBox;
+    MainMenu: TMainMenu;
+    MenuItem1: TMenuItem;
+    Maddpic: TMenuItem;
+    Maddvd: TMenuItem;
+    MVU: TMenuItem;
+    MPF: TMenuItem;
+    MenuItem4: TMenuItem;
+    MenuItem5: TMenuItem;
+    MPD: TMenuItem;
+    MPU: TMenuItem;
+    MVF: TMenuItem;
+    MVD: TMenuItem;
+    RightBox: TGroupBox;
     PBpres: TProgressBar;
+    Pres: TStaticText;
     procedure BackgroundClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure MenuItem1Click(Sender: TObject);
+    procedure MaddpicClick(Sender: TObject);
+    procedure MaddvdClick(Sender: TObject);
+    procedure MPDClick(Sender: TObject);
+    procedure MPFClick(Sender: TObject);
+    procedure MenuItem5Click(Sender: TObject);
+    procedure MPUClick(Sender: TObject);
+    procedure MVDClick(Sender: TObject);
+    procedure MVFClick(Sender: TObject);
+    procedure MVUClick(Sender: TObject);
   private
 
   public
@@ -54,6 +76,56 @@ begin
 end;
 
 procedure TMainform.FormShow(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MenuItem1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MaddpicClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MaddvdClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MPDClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MPFClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MenuItem5Click(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MPUClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MVDClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MVFClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.MVUClick(Sender: TObject);
 begin
 
 end;
