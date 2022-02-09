@@ -29,3 +29,4 @@ lib/
 
 .idea
 .vscode
+win64/src/

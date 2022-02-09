@@ -1,4 +1,6 @@
+rm -f govcl-template
+rm -f ./linux64/govcl-template
 go build
-cp SaponoAI ./linux64/
+cp govcl-template ./linux64/
 cd linux64
-SaponoAI
+govcl-template

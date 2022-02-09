@@ -79,3 +79,25 @@ func (f *TMainform) OnPPFClick(sender vcl.IObject) {
 
 }
 
+
+
+func (f *TMainform) OnStartBtnMouseDown(sender vcl.IObject, button types.TMouseButton, shift types.TShiftState, x int32, y int32) {
+
+}
+
+
+func (f *TMainform) OnStartBtnMouseLeave(sender vcl.IObject) {
+
+}
+
+
+func (f *TMainform) OnStartBtnMouseMove(sender vcl.IObject, shift types.TShiftState, x int32, y int32) {
+
+	f.StartBtn.Picture().LoadFromBytes([]byte{})
+}
+
+
+func (f *TMainform) OnStartBtnMouseUp(sender vcl.IObject, button types.TMouseButton, shift types.TShiftState, x int32, y int32) {
+
+}
+

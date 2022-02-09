@@ -10,9 +10,11 @@ type TMainform struct {
     *vcl.TForm
     Background *vcl.TImage
     LeftBox    *vcl.TGroupBox
+    Button1    *vcl.TButton
+    Button2    *vcl.TButton
     RightBox   *vcl.TGroupBox
     PBpres     *vcl.TProgressBar
-    ListView1  *vcl.TListView
+    TaskList   *vcl.TListView
     Pres       *vcl.TStaticText
     MainMenu   *vcl.TMainMenu
     MenuItem1  *vcl.TMenuItem
@@ -26,20 +28,19 @@ type TMainform struct {
     MVU        *vcl.TMenuItem
     MenuItem4  *vcl.TMenuItem
     MenuItem5  *vcl.TMenuItem
-    Button1    *vcl.TButton
-    Button2    *vcl.TButton
     PopupList  *vcl.TPopupMenu
     MenuItem2  *vcl.TMenuItem
     PPF        *vcl.TMenuItem
     PPD        *vcl.TMenuItem
     PPU        *vcl.TMenuItem
     MenuItem8  *vcl.TMenuItem
-    MenuItem9  *vcl.TMenuItem
-    MenuItem10 *vcl.TMenuItem
-    MenuItem11 *vcl.TMenuItem
     PVF        *vcl.TMenuItem
     PVD        *vcl.TMenuItem
     PVU        *vcl.TMenuItem
+    MenuItem9  *vcl.TMenuItem
+    MenuItem10 *vcl.TMenuItem
+    MenuItem11 *vcl.TMenuItem
+    StartBtn   *vcl.TImage
 
     //::private::
     TMainformFields

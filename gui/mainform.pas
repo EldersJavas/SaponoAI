@@ -16,7 +16,8 @@ type
     Background: TImage;
     Button1: TButton;
     Button2: TButton;
-    ListView1: TListView;
+    StartBtn: TImage;
+    TaskList: TListView;
     LeftBox: TGroupBox;
     MainMenu: TMainMenu;
     MenuItem1: TMenuItem;
@@ -49,6 +50,18 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure StartBtnMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure StartBtnMouseLeave(Sender: TObject);
+    procedure StartBtnMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure StartBtnMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure TaskListMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure TaskListMouseLeave(Sender: TObject);
+    procedure TaskListMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
     procedure MenuItem1Click(Sender: TObject);
     procedure MaddpicClick(Sender: TObject);
     procedure MaddvdClick(Sender: TObject);
@@ -60,6 +73,8 @@ type
     procedure MVDClick(Sender: TObject);
     procedure MVFClick(Sender: TObject);
     procedure MVUClick(Sender: TObject);
+    procedure TaskListMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
   private
 
   public
@@ -91,6 +106,46 @@ begin
 end;
 
 procedure TMainform.FormShow(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.StartBtnMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+
+end;
+
+procedure TMainform.StartBtnMouseLeave(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.StartBtnMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+
+end;
+
+procedure TMainform.StartBtnMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+
+end;
+
+procedure TMainform.TaskListMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+
+end;
+
+procedure TMainform.TaskListMouseLeave(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.TaskListMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
 begin
 
 end;
@@ -146,6 +201,12 @@ begin
 end;
 
 procedure TMainform.MVUClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.TaskListMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
 begin
 
 end;
