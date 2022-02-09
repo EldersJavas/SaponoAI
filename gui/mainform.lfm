@@ -1,7 +1,7 @@
 object Mainform: TMainform
-  Left = 530
+  Left = 452
   Height = 620
-  Top = 155
+  Top = 132
   Width = 800
   AllowDropFiles = True
   BorderIcons = [biSystemMenu, biMinimize]
@@ -18,6 +18,7 @@ object Mainform: TMainform
   Font.Quality = fqDraft
   Menu = MainMenu
   OnClose = FormClose
+  OnCreate = FormCreate
   OnShow = FormShow
   Position = poDesktopCenter
   ShowHint = True
@@ -522,28 +523,10 @@ object Mainform: TMainform
     Height = 601
     Top = 0
     Width = 312
-    Caption = 'LeftBox'
+    Caption = '任务'
     ClientHeight = 579
     ClientWidth = 308
     TabOrder = 0
-    object Button1: TButton
-      Left = 0
-      Height = 25
-      Top = 0
-      Width = 308
-      Align = alTop
-      Caption = 'Button1'
-      TabOrder = 0
-    end
-    object Button2: TButton
-      Left = 0
-      Height = 25
-      Top = 25
-      Width = 308
-      Align = alTop
-      Caption = 'Button2'
-      TabOrder = 1
-    end
     object StartBtn: TImage
       Cursor = crDrag
       Left = 0
@@ -633,12 +616,37 @@ object Mainform: TMainform
   end
   object RightBox: TGroupBox
     Left = 313
-    Height = 118
+    Height = 120
     Top = 440
     Width = 474
-    Caption = 'RightBox'
+    Caption = '日志'
+    ClientHeight = 98
+    ClientWidth = 470
     ParentBidiMode = False
     TabOrder = 1
+    object LogList: TListBox
+      Left = 0
+      Height = 98
+      Top = 0
+      Width = 470
+      Align = alClient
+      Color = 12508084
+      Font.CharSet = GB2312_CHARSET
+      Font.Color = 5921370
+      Font.Height = -13
+      Font.Name = 'Microsoft YaHei UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      Items.Strings = (
+        'SaponoAI Window Init...Check'
+      )
+      ItemHeight = 19
+      ItemIndex = 0
+      OnClick = LogListClick
+      ParentFont = False
+      TabOrder = 0
+    end
   end
   object PBpres: TProgressBar
     Left = 313
@@ -654,9 +662,16 @@ object Mainform: TMainform
     Width = 475
     Color = 12508084
     Columns = <>
+    Font.CharSet = GB2312_CHARSET
+    Font.Color = 5395026
+    Font.Height = -17
+    Font.Name = 'Microsoft YaHei UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
     Items.LazData = {
       1F00000001000000FFFFFFFFFFFFFFFFFFFFFFFF0000000003000000E7A9BA
     }
+    ParentFont = False
     PopupMenu = PopupList
     ReadOnly = True
     TabOrder = 3

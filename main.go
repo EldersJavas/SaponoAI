@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-    vcl.Application.SetTitle("SaponoAI")
-    vcl.Application.SetScaled(true)
+	vcl.Application.SetTitle("SaponoAI")
+	vcl.Application.SetScaled(true)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-    vcl.Application.CreateForm(&form.Mainform)
+	vcl.Application.CreateForm(&form.Mainform)
 	form.Mainform.SetDoubleBuffered(true)
 	vcl.Application.Run()
 

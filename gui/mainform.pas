@@ -14,8 +14,7 @@ type
 
   TMainform = class(TForm)
     Background: TImage;
-    Button1: TButton;
-    Button2: TButton;
+    LogList: TListBox;
     StartBtn: TImage;
     TaskList: TListView;
     LeftBox: TGroupBox;
@@ -50,6 +49,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure LogListClick(Sender: TObject);
     procedure StartBtnMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure StartBtnMouseLeave(Sender: TObject);
@@ -106,6 +106,11 @@ begin
 end;
 
 procedure TMainform.FormShow(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.LogListClick(Sender: TObject);
 begin
 
 end;

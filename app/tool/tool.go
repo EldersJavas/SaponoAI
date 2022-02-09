@@ -37,7 +37,7 @@ func LinuxDir(dir string) string {
 
 //Linux下Dir路径统一Windows格式
 func WinDir(dir string) string {
-	return strings.Replace(dir, "/","\\" , -1)
+	return strings.Replace(dir, "/", "\\", -1)
 }
 
 //自动判断系统并返回使用的路径斜杠格式
