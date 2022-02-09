@@ -2,8 +2,7 @@ package form
 
 import (
 	_ "embed"
-	"errors"
-	"github.com/gen2brain/dlgs"
+	"github.com/EldersJavas/SaponoAI/app"
 	"github.com/ying32/govcl/vcl"
 	"github.com/ying32/govcl/vcl/types"
 	"log"
@@ -37,31 +36,46 @@ func (f *TMainform) OnMenuItem1Click(sender vcl.IObject) {
 }
 
 func (f *TMainform) OnMPFClick(sender vcl.IObject) {
-	multi, b, err := dlgs.FileMulti("选择图片", "")
-	if err != nil {
-		log.Println(err)
-		dlgs.Error("错误", "无法读取文件."+err.Error())
-		return
-	}
-
+	AppM.ReadTaskFormFiles(app.TASK_TYPE_PIC)
+	log.Println(AppM.Tasklist)
 }
 
 func (f *TMainform) OnMPDClick(sender vcl.IObject) {
-	vcl.SelectDirectory2("选择图片文件夹", ".", false)
+	AppM.ReadTaskFormDir(app.TASK_TYPE_PIC)
+	log.Println(AppM.Tasklist)
 }
 
 func (f *TMainform) OnMPUClick(sender vcl.IObject) {
-
+	AppM.ReadTaskFormFiles(app.TASK_TYPE_VID)
+	log.Println(AppM.Tasklist)
 }
 
 func (f *TMainform) OnMVFClick(sender vcl.IObject) {
+	AppM.ReadTaskFormDir(app.TASK_TYPE_VID)
+	log.Println(AppM.Tasklist)
+}
+
+func (f *TMainform) OnFormShow(sender vcl.IObject) {
 
 }
+
 
 func (f *TMainform) OnMVDClick(sender vcl.IObject) {
 
 }
 
+
 func (f *TMainform) OnMVUClick(sender vcl.IObject) {
 
 }
+
+
+func (f *TMainform) OnMenuItem5Click(sender vcl.IObject) {
+
+}
+
+
+func (f *TMainform) OnPPFClick(sender vcl.IObject) {
+
+}
+

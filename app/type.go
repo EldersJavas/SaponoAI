@@ -2,7 +2,9 @@
 
 package app
 
-import "github.com/EldersJavas/SaponoAI/app/tool"
+import (
+	"github.com/EldersJavas/SaponoAI/app/tool"
+)
 
 type App struct {
 	Tasklist []Task
@@ -18,11 +20,19 @@ type Task struct {
 	TaskType int
 }
 
-func NewTask(path string, tType int) *Task {
-	n := tool.GetFileBaseName(path)
-	return &Task{Name: n, Path: path, TaskType: tType}
+func NewTask(p string, tType int) *Task {
+	n := tool.GetFileBaseName(tool.LinuxDir(p))
+	return &Task{Name: n, Path: tool.FileFormatPath(p), TaskType: tType}
 }
 
-func (a *App) AddTask(task Task) {
-	a.Tasklist = append(a.Tasklist, task)
+func NewTasks(path []string, tType int) (tl []Task) {
+	for _, p := range path {
+		n := tool.GetFileBaseName(tool.LinuxDir(p))
+		tl = append(tl, Task{Name: n, Path: tool.FileFormatPath(p), TaskType: tType})
+	}
+	return
+}
+
+func (AppM *App) AddTasks(task ...Task) {
+	AppM.Tasklist = append(AppM.Tasklist, task...)
 }

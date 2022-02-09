@@ -18,7 +18,6 @@ object Mainform: TMainform
   Font.Quality = fqDraft
   Menu = MainMenu
   OnClose = FormClose
-  OnCreate = FormCreate
   OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.0.10.0'
@@ -518,17 +517,37 @@ object Mainform: TMainform
     }
   end
   object LeftBox: TGroupBox
-    Left = 8
-    Height = 592
+    Left = 0
+    Height = 601
     Top = 0
-    Width = 298
+    Width = 312
     Caption = 'LeftBox'
+    ClientHeight = 579
+    ClientWidth = 308
     TabOrder = 0
+    object Button1: TButton
+      Left = 0
+      Height = 25
+      Top = 0
+      Width = 308
+      Align = alTop
+      Caption = 'Button1'
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 0
+      Height = 25
+      Top = 25
+      Width = 308
+      Align = alTop
+      Caption = 'Button2'
+      TabOrder = 1
+    end
   end
   object RightBox: TGroupBox
     Left = 313
-    Height = 238
-    Top = 320
+    Height = 118
+    Top = 440
     Width = 474
     Caption = 'RightBox'
     ParentBidiMode = False
@@ -543,13 +562,16 @@ object Mainform: TMainform
   end
   object ListView1: TListView
     Left = 312
-    Height = 309
+    Height = 424
     Top = 8
     Width = 475
+    Color = 12508084
     Columns = <>
     Items.LazData = {
       1F00000001000000FFFFFFFFFFFFFFFFFFFFFFFF0000000003000000E7A9BA
     }
+    PopupMenu = PopupList
+    ReadOnly = True
     TabOrder = 3
     ViewStyle = vsIcon
   end
@@ -565,8 +587,8 @@ object Mainform: TMainform
     TabOrder = 4
   end
   object MainMenu: TMainMenu
-    Left = 496
-    Top = 360
+    Left = 772
+    Top = 304
     object MenuItem1: TMenuItem
       Caption = '文件(&F)'
       OnClick = MenuItem1Click
@@ -609,6 +631,44 @@ object Mainform: TMainform
         Caption = '关于项目'
         OnClick = MenuItem5Click
       end
+    end
+  end
+  object PopupList: TPopupMenu
+    Left = 772
+    Top = 333
+    object MenuItem2: TMenuItem
+      Caption = '添加图片(&P)...'
+      object PPF: TMenuItem
+        Caption = '文件'
+        OnClick = PPFClick
+      end
+      object PPD: TMenuItem
+        Caption = '文件夹'
+      end
+      object PPU: TMenuItem
+        Caption = 'URL'
+      end
+    end
+    object MenuItem8: TMenuItem
+      Caption = '添加视频(&V)...'
+      object PVF: TMenuItem
+        Caption = '文件'
+      end
+      object PVD: TMenuItem
+        Caption = '文件夹'
+      end
+      object PVU: TMenuItem
+        Caption = 'URL'
+      end
+    end
+    object MenuItem9: TMenuItem
+      Caption = '刷新'
+    end
+    object MenuItem10: TMenuItem
+      Caption = '删除任务'
+    end
+    object MenuItem11: TMenuItem
+      Caption = '删除全部任务'
     end
   end
 end

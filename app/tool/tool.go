@@ -3,9 +3,6 @@ package tool
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"github.com/faiface/beep"
-	"github.com/faiface/beep/mp3"
-	"github.com/faiface/beep/speaker"
 	"math/rand"
 	"os"
 	"path"
@@ -34,17 +31,41 @@ func InSliceString(s string, slices []string) bool {
 }
 
 //Windows下Dir路径统一Linux格式
-func WinDir(dir string) string {
+func LinuxDir(dir string) string {
 	return strings.Replace(dir, "\\", "/", -1)
 }
 
-//自动判断系统并返回使用的格式
-func DirFormat() string {
+//Linux下Dir路径统一Windows格式
+func WinDir(dir string) string {
+	return strings.Replace(dir, "/","\\" , -1)
+}
+
+//自动判断系统并返回使用的路径斜杠格式
+func DirFormatGang() string {
 	if os.Getenv("GOOS") == "windows" {
 		return "\\"
 	} else {
 		return "/"
 	}
+}
+
+//自动判断系统并返回使用的路径
+func FileFormatPath(fp string) string {
+	if os.Getenv("GOOS") == "windows" {
+		return WinDir(fp)
+	} else {
+		return LinuxDir(fp)
+	}
+}
+
+//自动给路径尾部没有斜杠的字符串加上斜杠并转本系统写法
+func PathAddGang(s string) string {
+	if s[len(s)-1:] != "/" && s[len(s)-1:] != "\\" {
+		s = s + "/"
+	}
+	strings.Replace(s, "\\", DirFormatGang(), -1)
+	strings.Replace(s, "/", DirFormatGang(), -1)
+	return s
 }
 
 //获取文件名称（不带后缀）

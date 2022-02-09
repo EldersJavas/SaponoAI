@@ -14,12 +14,25 @@ type
 
   TMainform = class(TForm)
     Background: TImage;
+    Button1: TButton;
+    Button2: TButton;
     ListView1: TListView;
     LeftBox: TGroupBox;
     MainMenu: TMainMenu;
     MenuItem1: TMenuItem;
     Maddpic: TMenuItem;
     Maddvd: TMenuItem;
+    MenuItem10: TMenuItem;
+    MenuItem11: TMenuItem;
+    PVF: TMenuItem;
+    PVD: TMenuItem;
+    PVU: TMenuItem;
+    MenuItem2: TMenuItem;
+    PPF: TMenuItem;
+    PPD: TMenuItem;
+    PPU: TMenuItem;
+    MenuItem8: TMenuItem;
+    MenuItem9: TMenuItem;
     MVU: TMenuItem;
     MPF: TMenuItem;
     MenuItem4: TMenuItem;
@@ -28,6 +41,7 @@ type
     MPU: TMenuItem;
     MVF: TMenuItem;
     MVD: TMenuItem;
+    PopupList: TPopupMenu;
     RightBox: TGroupBox;
     PBpres: TProgressBar;
     Pres: TStaticText;
@@ -38,6 +52,7 @@ type
     procedure MenuItem1Click(Sender: TObject);
     procedure MaddpicClick(Sender: TObject);
     procedure MaddvdClick(Sender: TObject);
+    procedure PPFClick(Sender: TObject);
     procedure MPDClick(Sender: TObject);
     procedure MPFClick(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
@@ -91,6 +106,11 @@ begin
 end;
 
 procedure TMainform.MaddvdClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.PPFClick(Sender: TObject);
 begin
 
 end;
