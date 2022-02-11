@@ -773,6 +773,7 @@ object Mainform: TMainform
     Font.Name = 'Microsoft YaHei UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
+    IconOptions.AutoArrange = True
     Items.LazData = {
       4B00000003000000FFFFFFFFFFFFFFFFFFFFFFFF0000000003000000E7A9BAFF
       FFFFFFFFFFFFFFFFFFFFFF00000000020000007431FFFFFFFFFFFFFFFFFFFFFF
@@ -784,6 +785,7 @@ object Mainform: TMainform
     ReadOnly = True
     TabOrder = 3
     ViewStyle = vsIcon
+    OnClick = TaskListClick
   end
   object Pres: TStaticText
     Cursor = crHandPoint
@@ -872,14 +874,16 @@ object Mainform: TMainform
         Caption = 'URL'
       end
     end
-    object MenuItem9: TMenuItem
+    object PReload: TMenuItem
       Caption = '刷新'
     end
-    object MenuItem10: TMenuItem
+    object PDel: TMenuItem
       Caption = '删除任务'
+      OnClick = PDelClick
     end
-    object MenuItem11: TMenuItem
+    object PDelAll: TMenuItem
       Caption = '删除全部任务'
+      OnClick = PDelAllClick
     end
   end
 end

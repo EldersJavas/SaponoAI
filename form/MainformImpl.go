@@ -6,6 +6,7 @@ import (
 	"github.com/EldersJavas/SaponoAI/app/tool"
 	"github.com/ying32/govcl/vcl"
 	"github.com/ying32/govcl/vcl/types"
+	"runtime"
 )
 
 //::private::
@@ -101,5 +102,49 @@ func (f *TMainform) OnSysmsgClick(sender vcl.IObject) {
 }
 
 func (f *TMainform) OnPopupListPopup(sender vcl.IObject) {
+}
+
+func (f *TMainform) OnFormShow(sender vcl.IObject) {
 
 }
+
+
+func (f *TMainform) OnMVUClick(sender vcl.IObject) {
+
+}
+
+
+func (f *TMainform) OnMenuItem5Click(sender vcl.IObject) {
+
+}
+
+
+func (f *TMainform) OnPPFClick(sender vcl.IObject) {
+
+}
+
+
+func (f *TMainform) OnPDelClick(sender vcl.IObject) {
+	if f.TaskList.ItemIndex() != -1 {
+		f.TaskList.Items().Delete(f.TaskList.ItemIndex())
+	}
+}
+
+
+func (f *TMainform) OnPDelAllClick(sender vcl.IObject) {
+
+}
+
+
+func (f *TMainform) OnTaskListClick(sender vcl.IObject) {
+	imgList := vcl.NewImageList(Mainform)
+	if runtime.GOOS == "windows" {
+		icon := vcl.NewIcon()
+		icon.LoadFromFile(".\\res\\button.bmp")
+		imgList.AddIcon(icon)
+		icon.Free()
+	}
+	vcl.ThreadSync(func() {
+	f.TaskList.SetLargeImages(imgList)})
+}
+

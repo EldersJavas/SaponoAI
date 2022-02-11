@@ -31,8 +31,8 @@ type
     MenuItem1: TMenuItem;
     Maddpic: TMenuItem;
     Maddvd: TMenuItem;
-    MenuItem10: TMenuItem;
-    MenuItem11: TMenuItem;
+    PDel: TMenuItem;
+    PDelAll: TMenuItem;
     PVF: TMenuItem;
     PVD: TMenuItem;
     PVU: TMenuItem;
@@ -41,7 +41,7 @@ type
     PPD: TMenuItem;
     PPU: TMenuItem;
     MenuItem8: TMenuItem;
-    MenuItem9: TMenuItem;
+    PReload: TMenuItem;
     MVU: TMenuItem;
     MPF: TMenuItem;
     MenuItem4: TMenuItem;
@@ -59,6 +59,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure LogListClick(Sender: TObject);
+    procedure PDelAllClick(Sender: TObject);
+    procedure PDelClick(Sender: TObject);
     procedure PopupListPopup(Sender: TObject);
     procedure StartBtnMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: integer);
@@ -67,6 +69,7 @@ type
     procedure StartBtnMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: integer);
     procedure SysmsgClick(Sender: TObject);
+    procedure TaskListClick(Sender: TObject);
     procedure TaskListMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: integer);
     procedure TaskListMouseLeave(Sender: TObject);
@@ -124,6 +127,16 @@ begin
 
 end;
 
+procedure TMainform.PDelAllClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.PDelClick(Sender: TObject);
+begin
+
+end;
+
 procedure TMainform.PopupListPopup(Sender: TObject);
 begin
 
@@ -153,6 +166,11 @@ begin
 end;
 
 procedure TMainform.SysmsgClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainform.TaskListClick(Sender: TObject);
 begin
 
 end;

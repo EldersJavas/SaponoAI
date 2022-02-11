@@ -11,6 +11,15 @@ type TMainform struct {
     Background   *vcl.TImage
     LeftBox      *vcl.TGroupBox
     StartBtn     *vcl.TImage
+    SysGroup     *vcl.TGroupBox
+    Sysmsg       *vcl.TStaticText
+    RBSelf       *vcl.TRadioButton
+    ComboBox1    *vcl.TComboBox
+    RadioButton1 *vcl.TRadioButton
+    StaticText1  *vcl.TStaticText
+    ComboBox2    *vcl.TComboBox
+    StaticText2  *vcl.TStaticText
+    GroupBox1    *vcl.TGroupBox
     RightBox     *vcl.TGroupBox
     LogList      *vcl.TListBox
     PBpres       *vcl.TProgressBar
@@ -37,18 +46,9 @@ type TMainform struct {
     PVF          *vcl.TMenuItem
     PVD          *vcl.TMenuItem
     PVU          *vcl.TMenuItem
-    MenuItem9    *vcl.TMenuItem
-    MenuItem10   *vcl.TMenuItem
-    MenuItem11   *vcl.TMenuItem
-    SysGroup     *vcl.TGroupBox
-    Sysmsg       *vcl.TStaticText
-    RBSelf       *vcl.TRadioButton
-    ComboBox1    *vcl.TComboBox
-    RadioButton1 *vcl.TRadioButton
-    StaticText1  *vcl.TStaticText
-    ComboBox2    *vcl.TComboBox
-    StaticText2  *vcl.TStaticText
-    GroupBox1    *vcl.TGroupBox
+    PReload      *vcl.TMenuItem
+    PDel         *vcl.TMenuItem
+    PDelAll      *vcl.TMenuItem
 
     //::private::
     TMainformFields
