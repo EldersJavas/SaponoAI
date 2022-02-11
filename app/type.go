@@ -4,6 +4,7 @@ package app
 
 import (
 	"github.com/EldersJavas/SaponoAI/app/tool"
+	uuid "github.com/satori/go.uuid"
 )
 
 type App struct {
@@ -15,20 +16,37 @@ func NewApp() *App {
 }
 
 type Task struct {
-	Name     string
-	Path     string
-	TaskType int
+	Inpath   string `json:"Inpath"`
+	Outpath  string `json:"Outpath"`
+	Scale    int    `json:"Scale"`
+	Model    int    `json:"Model"`
+	Uid      string `json:"Uid"`
+	TaskType int    `json:"TaskType"`
+	Name     string `json:"Name"`
 }
 
 func NewTask(p string, tType int) *Task {
+	m := 0
+	if tType == TASK_TYPE_PIC {
+		m = Realesrgan_x4plus
+	} else {
+		m = RealESRGANv2_animevideo_xsx4
+	}
 	n := tool.GetFileBaseName(tool.LinuxDir(p))
-	return &Task{Name: n, Path: tool.FileFormatPath(p), TaskType: tType}
+	return &Task{
+		Inpath:   tool.FileFormatPath(p),
+		Outpath:  tool.FileFormatPath(tool.GetAppRootDir() + "\\output\\"),
+		Scale:    4,
+		Model:    m,
+		Uid:      uuid.Must(uuid.NewV4(), nil).String(),
+		TaskType: tType,
+		Name:     n,
+	}
 }
 
 func NewTasks(path []string, tType int) (tl []Task) {
 	for _, p := range path {
-		n := tool.GetFileBaseName(tool.LinuxDir(p))
-		tl = append(tl, Task{Name: n, Path: tool.FileFormatPath(p), TaskType: tType})
+		tl = append(tl, *NewTask(p,tType))
 	}
 	return
 }

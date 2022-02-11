@@ -4,6 +4,8 @@ github.com/gopherjs/gopherjs v0.0.0-20220104163920-15ed2e8cf2bd h1:D/H64OK+VY7O0
 github.com/gopherjs/gopherjs v0.0.0-20220104163920-15ed2e8cf2bd/go.mod h1:cz9oNYuRUWGdHmLF2IodMLkAhcPtXeULvcBNagUrxTI=
 github.com/hajimehoshi/file2byteslice v0.0.0-20210813153925-5340248a8f41 h1:s01qIIRG7vN/5ndLwkDktjx44ulFk6apvAjVBYR50Yo=
 github.com/hajimehoshi/file2byteslice v0.0.0-20210813153925-5340248a8f41/go.mod h1:CqqAHp7Dk/AqQiwuhV1yT2334qbA/tFWQW0MD2dGqUE=
+github.com/satori/go.uuid v1.2.0 h1:0uYX9dsZ2yD7q2RtLRtPSdGDWzjeM3TbMJP9utgA0ww=
+github.com/satori/go.uuid v1.2.0/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
 github.com/ying32/dylib v0.0.0-20210414124638-bf395b2d391a h1:kyKEUVx/Q2CVZmGMAtgChD4U+hvc/oRU7BgaOK0u7bY=
 github.com/ying32/dylib v0.0.0-20210414124638-bf395b2d391a/go.mod h1:WPBTfbqg/aA1xqHFPB4fgBHETq/G/75yErbnexmaEOo=
 github.com/ying32/govcl v2.2.0+incompatible h1:TZFn0SUuZaufZ+U7Urs9o1ZmbflsCPQcswz1bo22w9s=

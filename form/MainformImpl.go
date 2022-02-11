@@ -13,7 +13,9 @@ type TMainformFields struct {
 }
 
 func (f *TMainform) OnFormCloseQuery(sender vcl.IObject, canClose *bool) {
-	*canClose = vcl.MessageDlg("是否退出?", types.MtInformation, types.MbYes, types.MbNo) == types.MrYes
+	vcl.ThreadSync(func() {
+		*canClose = vcl.MessageDlg("是否退出?", types.MtInformation, types.MbYes, types.MbNo) == types.MrYes
+	})
 	if *canClose {
 		vcl.Application.Terminate()
 	}
@@ -46,33 +48,17 @@ func (f *TMainform) OnMPDClick(sender vcl.IObject) {
 }
 
 func (f *TMainform) OnMPUClick(sender vcl.IObject) {
+
+}
+
+func (f *TMainform) OnMVFClick(sender vcl.IObject) {
 	AppM.ReadTaskFormFiles(app.TASK_TYPE_VID)
 	f.Logout(AppM.Tasklist)
 }
 
-func (f *TMainform) OnMVFClick(sender vcl.IObject) {
+func (f *TMainform) OnMVDClick(sender vcl.IObject) {
 	AppM.ReadTaskFormDir(app.TASK_TYPE_VID)
 	f.Logout(AppM.Tasklist)
-}
-
-func (f *TMainform) OnFormShow(sender vcl.IObject) {
-
-}
-
-func (f *TMainform) OnMVDClick(sender vcl.IObject) {
-
-}
-
-func (f *TMainform) OnMVUClick(sender vcl.IObject) {
-
-}
-
-func (f *TMainform) OnMenuItem5Click(sender vcl.IObject) {
-
-}
-
-func (f *TMainform) OnPPFClick(sender vcl.IObject) {
-
 }
 
 func (f *TMainform) OnStartBtnMouseDown(sender vcl.IObject, button types.TMouseButton, shift types.TShiftState, x int32, y int32) {
@@ -108,4 +94,12 @@ func (f *TMainform) OnLogListClick(sender vcl.IObject) {
 	vcl.ThreadSync(func() {
 		//f.LogList.AddItem("test",nil)
 	})
+}
+
+func (f *TMainform) OnSysmsgClick(sender vcl.IObject) {
+
+}
+
+func (f *TMainform) OnPopupListPopup(sender vcl.IObject) {
+
 }

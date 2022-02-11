@@ -14,8 +14,17 @@ type
 
   TMainform = class(TForm)
     Background: TImage;
+    ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
+    GroupBox1: TGroupBox;
+    RadioButton1: TRadioButton;
+    RBSelf: TRadioButton;
+    StaticText1: TStaticText;
+    StaticText2: TStaticText;
+    SysGroup: TGroupBox;
     LogList: TListBox;
     StartBtn: TImage;
+    Sysmsg: TStaticText;
     TaskList: TListView;
     LeftBox: TGroupBox;
     MainMenu: TMainMenu;
@@ -50,18 +59,18 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure LogListClick(Sender: TObject);
+    procedure PopupListPopup(Sender: TObject);
     procedure StartBtnMouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+      Shift: TShiftState; X, Y: integer);
     procedure StartBtnMouseLeave(Sender: TObject);
-    procedure StartBtnMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Integer);
+    procedure StartBtnMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
     procedure StartBtnMouseUp(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+      Shift: TShiftState; X, Y: integer);
+    procedure SysmsgClick(Sender: TObject);
     procedure TaskListMouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+      Shift: TShiftState; X, Y: integer);
     procedure TaskListMouseLeave(Sender: TObject);
-    procedure TaskListMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Integer);
+    procedure TaskListMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
     procedure MenuItem1Click(Sender: TObject);
     procedure MaddpicClick(Sender: TObject);
     procedure MaddvdClick(Sender: TObject);
@@ -74,7 +83,7 @@ type
     procedure MVFClick(Sender: TObject);
     procedure MVUClick(Sender: TObject);
     procedure TaskListMouseUp(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+      Shift: TShiftState; X, Y: integer);
   private
 
   public
@@ -115,8 +124,13 @@ begin
 
 end;
 
+procedure TMainform.PopupListPopup(Sender: TObject);
+begin
+
+end;
+
 procedure TMainform.StartBtnMouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
+  Shift: TShiftState; X, Y: integer);
 begin
 
 end;
@@ -126,20 +140,25 @@ begin
 
 end;
 
-procedure TMainform.StartBtnMouseMove(Sender: TObject; Shift: TShiftState; X,
-  Y: Integer);
+procedure TMainform.StartBtnMouseMove(Sender: TObject; Shift: TShiftState;
+  X, Y: integer);
 begin
 
 end;
 
 procedure TMainform.StartBtnMouseUp(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
+  Shift: TShiftState; X, Y: integer);
+begin
+
+end;
+
+procedure TMainform.SysmsgClick(Sender: TObject);
 begin
 
 end;
 
 procedure TMainform.TaskListMouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
+  Shift: TShiftState; X, Y: integer);
 begin
 
 end;
@@ -149,8 +168,8 @@ begin
 
 end;
 
-procedure TMainform.TaskListMouseMove(Sender: TObject; Shift: TShiftState; X,
-  Y: Integer);
+procedure TMainform.TaskListMouseMove(Sender: TObject; Shift: TShiftState;
+  X, Y: integer);
 begin
 
 end;
@@ -211,10 +230,12 @@ begin
 end;
 
 procedure TMainform.TaskListMouseUp(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
+  Shift: TShiftState; X, Y: integer);
 begin
 
 end;
 
 end.
+
+
 

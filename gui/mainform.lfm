@@ -523,12 +523,12 @@ object Mainform: TMainform
     Height = 601
     Top = 0
     Width = 312
-    Caption = '任务'
+    Caption = 'Main'
     ClientHeight = 579
     ClientWidth = 308
     TabOrder = 0
     object StartBtn: TImage
-      Cursor = crDrag
+      Cursor = crHandPoint
       Left = 0
       Height = 90
       Top = 489
@@ -613,20 +613,122 @@ object Mainform: TMainform
         1142BC23EDFFFF079BF94051D98C23B20000000049454E44AE426082
       }
     end
+    object SysGroup: TGroupBox
+      Left = 0
+      Height = 118
+      Top = 371
+      Width = 308
+      Align = alBottom
+      Caption = 'SysGroup'
+      ClientHeight = 96
+      ClientWidth = 304
+      TabOrder = 0
+      object Sysmsg: TStaticText
+        Left = 0
+        Height = 96
+        Top = 0
+        Width = 304
+        Align = alClient
+        Caption = 'CPU:'#13#10'内存:'#13#10'GPU:'#13#10'最大线程:'
+        Font.CharSet = GB2312_CHARSET
+        Font.Color = clGrayText
+        Font.Height = -16
+        Font.Name = 'Microsoft YaHei UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        OnClick = SysmsgClick
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object RBSelf: TRadioButton
+      Left = 0
+      Height = 21
+      Top = 309
+      Width = 308
+      Align = alBottom
+      Caption = '全局设置'
+      TabOrder = 1
+    end
+    object ComboBox1: TComboBox
+      Left = 0
+      Height = 25
+      Top = 346
+      Width = 308
+      Align = alBottom
+      ItemHeight = 17
+      Items.Strings = (
+        'GAN普通图片-4倍'
+        '动漫图片-4倍'
+        'NET普通图片-4倍'
+        '动漫视频-2倍(新)'
+        '动漫视频-4倍(新)'
+        'v2动漫图片-2倍(新)'
+        'v2动漫图片-4倍(新)'
+      )
+      TabOrder = 2
+      Text = '引擎'
+    end
+    object RadioButton1: TRadioButton
+      Left = 0
+      Height = 21
+      Top = 288
+      Width = 308
+      Align = alBottom
+      Caption = 'RadioButton1'
+      TabOrder = 3
+    end
+    object StaticText1: TStaticText
+      Left = 0
+      Height = 16
+      Top = 330
+      Width = 308
+      Align = alBottom
+      Caption = 'StaticText1'
+      TabOrder = 4
+    end
+    object ComboBox2: TComboBox
+      Left = 0
+      Height = 25
+      Top = 263
+      Width = 308
+      Align = alBottom
+      ItemHeight = 17
+      TabOrder = 5
+      Text = 'ComboBox2'
+    end
+    object StaticText2: TStaticText
+      Left = 0
+      Height = 15
+      Top = 248
+      Width = 308
+      Align = alBottom
+      Caption = 'StaticText2'
+      TabOrder = 6
+    end
+    object GroupBox1: TGroupBox
+      Left = 0
+      Height = 96
+      Top = 152
+      Width = 308
+      Align = alBottom
+      Caption = 'GroupBox1'
+      TabOrder = 7
+    end
   end
   object RightBox: TGroupBox
     Left = 313
-    Height = 120
-    Top = 440
+    Height = 168
+    Top = 392
     Width = 474
     Caption = '日志'
-    ClientHeight = 98
+    ClientHeight = 146
     ClientWidth = 470
     ParentBidiMode = False
     TabOrder = 1
     object LogList: TListBox
       Left = 0
-      Height = 98
+      Height = 146
       Top = 0
       Width = 470
       Align = alClient
@@ -649,15 +751,18 @@ object Mainform: TMainform
     end
   end
   object PBpres: TProgressBar
-    Left = 313
+    Left = 320
     Height = 23
     Top = 568
-    Width = 433
+    Width = 426
+    Position = 10
+    Smooth = True
     TabOrder = 2
+    BarShowText = True
   end
   object TaskList: TListView
     Left = 312
-    Height = 424
+    Height = 384
     Top = 8
     Width = 475
     Color = 12508084
@@ -669,8 +774,11 @@ object Mainform: TMainform
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Items.LazData = {
-      1F00000001000000FFFFFFFFFFFFFFFFFFFFFFFF0000000003000000E7A9BA
+      4B00000003000000FFFFFFFFFFFFFFFFFFFFFFFF0000000003000000E7A9BAFF
+      FFFFFFFFFFFFFFFFFFFFFF00000000020000007431FFFFFFFFFFFFFFFFFFFFFF
+      FF00000000020000007432
     }
+    MultiSelect = True
     ParentFont = False
     PopupMenu = PopupList
     ReadOnly = True
@@ -736,6 +844,7 @@ object Mainform: TMainform
     end
   end
   object PopupList: TPopupMenu
+    OnPopup = PopupListPopup
     Left = 772
     Top = 333
     object MenuItem2: TMenuItem
