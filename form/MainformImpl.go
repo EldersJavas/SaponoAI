@@ -146,5 +146,6 @@ func (f *TMainform) OnTaskListClick(sender vcl.IObject) {
 	}
 	vcl.ThreadSync(func() {
 	f.TaskList.SetLargeImages(imgList)})
+	for i := 0; i < 12; i++ {
+	}
 }
-

@@ -46,7 +46,7 @@ func NewTask(p string, tType int) *Task {
 
 func NewTasks(path []string, tType int) (tl []Task) {
 	for _, p := range path {
-		tl = append(tl, *NewTask(p,tType))
+		tl = append(tl, *NewTask(p, tType))
 	}
 	return
 }

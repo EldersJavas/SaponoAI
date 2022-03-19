@@ -22,7 +22,7 @@ func (f *TMainform) Logout(s ...interface{}) {
 	})
 }
 
-func(f *TMainform) Testlistaddimg()  {
+func (f *TMainform) Testlistaddimg() {
 	f.TaskList.Items().BeginUpdate()
 	for i := 1; i <= 100; i++ {
 		item := f.TaskList.Items().Add()
